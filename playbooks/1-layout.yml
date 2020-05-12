@@ -3,3 +3,11 @@
   tasks:
    - name: ping
      ping:
+     
+- name: play2
+  hosts: all
+  tasks:
+   - name: create an empty file
+     file:
+       path: /tmp/demo
+       state: touch
