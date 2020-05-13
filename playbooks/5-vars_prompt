@@ -1,0 +1,9 @@
+- name: demo on var_prompt
+  hosts: all
+  var_prompt:
+    prompt: enter the url
+    name: URL
+  tasks:
+   - name: print using var_prompt
+     debug:
+       msg: "URL = {{URL}}"
