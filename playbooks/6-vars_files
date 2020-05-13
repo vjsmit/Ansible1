@@ -1,0 +1,8 @@
+- name: Demo on print vars from a file
+  hosts: all
+  vars_files:
+    6-var.yml
+  tasks:
+    - name: print vars from file
+      debug:
+        msg: "URL = {{URL}}"
