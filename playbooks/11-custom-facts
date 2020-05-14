@@ -3,4 +3,5 @@
   tasks:
     - name: Print Custom Facts
       debug:
-        msg: "{{ansible_local}}"
+        msg: "{{ansible_local}}"               
+        msg: "{{ansible_local.demo}}"
