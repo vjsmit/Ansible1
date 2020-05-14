@@ -1,1 +1,3 @@
-
+- name: Load CentOS play
+  include: Centos.yml
+  when: ansible_distribution == "CentOS"
