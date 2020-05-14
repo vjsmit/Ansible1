@@ -1,5 +1,6 @@
 - name: demo on tags
   hosts: all
+  gather_facts: no
   tasks:
     - name: print if tag is 1
       debug:
