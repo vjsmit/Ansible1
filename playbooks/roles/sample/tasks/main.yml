@@ -1,0 +1,4 @@
+- name: Print hello
+  hosts: all
+  debug:
+    msg: Hello India!
