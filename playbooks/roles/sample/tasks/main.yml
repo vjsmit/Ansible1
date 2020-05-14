@@ -1,4 +1,4 @@
-- name: Print hello
+- name: Print Helloooo from sample role
   hosts: all
   debug:
     msg: Hello India!
