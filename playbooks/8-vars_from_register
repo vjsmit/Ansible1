@@ -1,0 +1,5 @@
+- name: Demo on vars fro registers
+  hosts: all
+  tasks:
+    - name: get uptime
+      shell: uptime
