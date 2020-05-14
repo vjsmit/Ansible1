@@ -8,10 +8,10 @@
         - one
         
     - name: prnt 2 if tag is 2
-       debug:
-         msg: "Two"
-       tags:
-         - two
+      debug:
+        msg: "Two"
+      tags:
+        - two
          
     - name: print three if tag is three
       debug:
