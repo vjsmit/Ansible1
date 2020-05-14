@@ -4,6 +4,7 @@
     - name: get uptime
       shell: uptime
       registers: OUT
+      
     - name: Print OUT variable
-        debug:
+      debug:
         msg: "{{OUT}}"
