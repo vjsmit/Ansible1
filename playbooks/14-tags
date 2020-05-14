@@ -1,0 +1,21 @@
+- name: demo on tags
+  host: all
+  tasks:
+    - name: print if tag is 1
+      debug:
+        msg: "One"
+      tags:
+        - one
+        
+    - name: prnt 2 if tag is 2
+       debug:
+         msg: "Two"
+       tags:
+         - two
+         
+    - name: print three if tag is three
+      debug:
+        msg: "Three"
+      tags:
+        - three
+      
