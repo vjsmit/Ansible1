@@ -1,0 +1,14 @@
+- name: demo on vars in task
+  hosts: all
+  tasks:
+    - name: get uptime
+      shell: uptime
+      register: OUT
+      
+    - name:
+      set_facts:
+        UPTIME: "{{OUT}}"
+        
+    - name: Print vars from task
+      debug:
+        msg: "UPTIME = {{UPTIME.STDOUT}}"
