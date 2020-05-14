@@ -3,7 +3,7 @@
   tasks:
     - name: get uptime
       shell: uptime
-      registers: OUT
+      register: OUT
       
     - name: Print OUT variable
       debug:
