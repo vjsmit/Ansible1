@@ -1,0 +1,6 @@
+- name: demo on  vars using gather facts
+  hosts: all
+  tasks:
+    - name: Print Date & time
+      debug:
+        msg:  "Date & time = {{ansible_date_time}}"
