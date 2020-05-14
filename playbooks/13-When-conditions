@@ -1,0 +1,10 @@
+- name: demo on when conditions
+  hosts: all
+  tasks:
+    - name: check rpm command is there or not
+      shell: which rpm
+      when: ansible_distribution == "CentOS"
+      
+    - name: check dpkg coomand is there or not
+      shell: which dpkg
+      when: ansible_distribution =="Ubuntu"
