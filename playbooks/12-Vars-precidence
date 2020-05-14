@@ -1,0 +1,10 @@
+- name: demo on var precidence
+  hosts: all
+  vars:
+   ABC: vars_from_play
+  tasks:
+    - name: Print vars
+      debug:
+        msg: "{{ABC}}"
+      vars:
+       ABC: vars_from_task
