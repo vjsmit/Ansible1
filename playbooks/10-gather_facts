@@ -1,5 +1,6 @@
 - name: demo on  vars using gather facts
   hosts: all
+  gather_facts: no
   tasks:
     - name: Print Date & time
       debug:
