@@ -1,0 +1,6 @@
+- name: demo on printing custom facts
+  hosts: all
+  tasks:
+    - name: Print Custom Facts
+      debug:
+        msg: "{{ansible_local}}"
