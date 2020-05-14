@@ -7,8 +7,8 @@
       
     - name: setting a var in task
       set_fact:
-        UPTIME: "{{OUT}}"
+        UPTIME: "{{OUT.STDOUT}}"
         
     - name: Print vars from task
       debug:
-        msg: "UPTIME = {{UPTIME.STDOUT}}"
+        msg: "UPTIME = {{UPTIME}}"
