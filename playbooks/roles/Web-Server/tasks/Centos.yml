@@ -1,3 +1,5 @@
-- name: Say Hello
-  debug:
-    msg: "Hello from CentOS"
+- name: To install a Web Server
+  hosts: all
+  package:
+    name: httpd
+    state: present
