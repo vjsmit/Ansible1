@@ -2,3 +2,22 @@
   package:
     name: httpd
     state: present
+  notify: Restart HTTPD
+    
+- name: copy proxy file
+  copy:
+    src: proxy.conf
+    dest: /etc/httpd/conf.d/proxy.conf
+  notify: Restart HTTPD
+  
+ - name: download default index file
+   get_url:
+     url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
+     dest: /var/www/html/index.html
+
+ - name: start WebServer
+   service:
+     name: httpd
+     state: started
+     enabled: yes
+   
