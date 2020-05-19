@@ -10,10 +10,10 @@
     dest: /etc/httpd/conf.d/proxy.conf
   notify: Restart HTTPD
   
- - name: download default index file
-   get_url:
-     url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
-     dest: /var/www/html/index.html
+- name: download default index file
+  get_url:
+    url: https://s3-us-west-2.amazonaws.com/studentapi-cit/index.html
+    dest: /var/www/html/index.html
 
  - name: start WebServer
    service:
