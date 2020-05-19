@@ -1,4 +1,4 @@
-18.205.160.203 ansible_user=centos
-34.227.142.60 ansible_user=ubuntu
+52.91.14.100 ansible_user=centos
+52.91.206.62 ansible_user=ubuntu
 [all:vars]
 URL=group.google.com
