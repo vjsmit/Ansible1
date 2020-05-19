@@ -12,3 +12,4 @@
     src: "{{TOMCAT_URL}}"
     dest: "{{APP_HOME}}"
     remote_src: yes
+ become_user: "{{APP_USER}}"
