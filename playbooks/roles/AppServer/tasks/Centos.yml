@@ -1,1 +1,14 @@
+- name: install Java
+  package:
+    name: java
+    state: present
 
+- name: create App user
+  user:
+    name: "{{APP_USER}}"
+    
+- name: Download tomcat
+  unarchive:
+    src: "{{TOMCAT_URL}}"
+    dest: "{{APP_HOME}}"
+    remote_src: yes
