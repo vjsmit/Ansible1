@@ -1,5 +1,4 @@
 - name: To install a Web Server
-  hosts: all
   package:
     name: httpd
     state: present
