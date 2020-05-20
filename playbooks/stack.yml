@@ -4,5 +4,6 @@
   roles:
     - Web-Server
     - AppServer
+    - newrelic
 
   
