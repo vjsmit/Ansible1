@@ -1,1 +1,17 @@
-- name: 
+- name: upload license key
+  lineinfile:
+    path: /etc/newrelic-infra.yml
+    line: "license_key: {{LICENSE_KEY}}"
+    create: yes
+    
+- name: Download CentOS repo
+  get_url:
+    url: https://download.newrelic.com/infrastructure_agent/linux/yum/el/7/x86_64/newrelic-infra.repo
+    dest: /etc/yum.repos.d/newrelic-infra.repo
+    
+- name: Install Newrelic agent
+  yum:
+    name: newrelic-infra
+    state: present
+  
+  
