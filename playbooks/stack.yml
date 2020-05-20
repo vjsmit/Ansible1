@@ -1,5 +1,5 @@
 - name: Install webserver & appserver
-  hosts: all
+  hosts: localhost
   become: yes
   roles:
     - Web-Server
